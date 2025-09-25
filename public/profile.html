@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Perfil</title>
+  </head>
+  <body>
+    <h2 id="welcome"></h2>
+    <a href="/logout">Cerrar sesión</a>
+    <script>
+      fetch("/api/user")
+        .then((res) => res.json())
+        .then((user) => {
+          document.getElementById("welcome").textContent = `Bienvenido ${user.displayName}`;
+        });
+    </script>
+  </body>
+</html>

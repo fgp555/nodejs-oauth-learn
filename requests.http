@@ -1,0 +1,18 @@
+### Página principal (HTML)
+GET http://localhost:3000/
+
+### Iniciar flujo OAuth con Google (abre ventana en navegador)
+GET http://localhost:3000/api/oauth
+
+### Callback de Google (no se puede probar directo porque Google redirige aquí)
+GET http://localhost:3000/api/oauth/callback
+
+### Página de perfil (HTML, requiere sesión iniciada)
+GET http://localhost:3000/profile
+
+### Obtener datos del usuario autenticado (JSON)
+GET http://localhost:3000/api/user
+Cookie: connect.sid=TU_COOKIE_DE_SESION
+
+### Cerrar sesión
+GET http://localhost:3000/logout
